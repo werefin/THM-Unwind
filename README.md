@@ -2,11 +2,9 @@
 
 A reverse engineering challenge featuring a crypto-based binary that validates flags using a stateful cryptographic transformation.
 
-### Challenge Description
+### Challenge description
 
-**Welcome to Unwind - a secure system protected by a cryptographic system based on bit rotations.**
-
-The system uses a multi-layer encryption system where each character undergoes **7 transformations** through substitution boxes and rotations. The rotations are position-dependent, each character rotates by a different amount based on its position in the key. The algorithm creates a complex dependency chain where each character depends on all previous ones (i.e., one wrong character breaks the rotation chain).
+Unwind uses a multi-layer encryption system where each character undergoes **7 transformations** through substitution boxes and rotations. The rotations are position-dependent, each character rotates by a different amount based on its position in the key. The algorithm creates a complex dependency chain where each character depends on all previous ones (i.e., one wrong character breaks the rotation chain).
 
 **Objective**: reverse engineer the binary, understand the rotation cipher, and unlock Unwind to discover the secrets of rotation-based cryptography.
 
