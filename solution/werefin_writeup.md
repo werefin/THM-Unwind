@@ -449,7 +449,7 @@ def solve():
         # Try all printable ASCII characters
         for c in range(0x20, 0x7F): # printable ASCII range
             # Apply forward transformation
-            result = transform_char(c, checksum1, checksum2, index)
+            result = transform_char(c, checksum_1, checksum_2, index)
             
             # Check if matches target byte
             if result == target[index]:
