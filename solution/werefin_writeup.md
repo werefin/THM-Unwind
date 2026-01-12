@@ -26,7 +26,7 @@ $ file unwind
 unwind: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, stripped
 ```
 
-**Answer**: `ELF 64-bit LSB executable`
+**Answer**: `ELF 64-bit LSB executable, x86-64, version 1 (SYSV), statically linked, stripped`
 
 **Analysis**:
 - **ELF 64-bit**: executable and linkable format, 64-bit architecture
