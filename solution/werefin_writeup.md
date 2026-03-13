@@ -17,8 +17,6 @@ Unwind is a reverse engineering challenge involving a stripped 64-bit ELF binary
 
 ### File type analysis
 
-**Question**: what type of file is the unwind binary?
-
 Let's start by examining the binary:
 
 ```bash
@@ -256,10 +254,6 @@ The 7 transformation steps are:
 6. Second checksum XOR
 7. Dual checksum updates
 
-**Question**: how many independent checksums are maintained?
-
-**Answer**: `2`
-
 Two independent 8-bit checksums are maintained:
 - **checksum_1** (`r8`): updated as `(checksum_1 + transformed_byte) ^ 0xA5`
 - **checksum_2** (`r9`): updated as `(checksum_2 + (transformed_byte * 2)) ^ 0x3C`
@@ -269,8 +263,6 @@ Two independent 8-bit checksums are maintained:
 ---
 
 ### Extracting data structures
-
-**Question**: what is the forward S-box value at index `0x0A`?
 
 **Method 1: using Binary Ninja**
 
@@ -347,8 +339,6 @@ Target bytes (16 bytes)
 
 S-box inverse relationship verified!
 ```
-
-**Answer:** `0x83`.
 
 **Verification**:
 ```python
